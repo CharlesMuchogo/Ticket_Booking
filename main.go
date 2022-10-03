@@ -29,8 +29,3 @@ func main()  {
 	
 }
 
-func userInput(variableToScan string, messageToUser string){
-	fmt.Println(messageToUser)
-	fmt.Scan(&variableToScan)
-	
-}
