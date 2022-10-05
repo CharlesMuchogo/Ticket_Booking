@@ -13,7 +13,7 @@ func main()  {
 	var remainingTickets uint = totalTickets
 	var bookedTickets uint
 
-	 var names[] string
+	 var bookingDetails[] string
 	
 	
 
@@ -48,9 +48,9 @@ func main()  {
 	
 
 	remainingTickets = remainingTickets - bookedTickets
-	names = append(names, firstName +" "+ lastName + " " + email)
+	bookingDetails = append(bookingDetails, firstName +" "+ lastName + " " + email)
 	fmt.Printf("Thank you %v %v, You have booked %v tickets. Total remaining tickets are %v \n", firstName, lastName, bookedTickets, remainingTickets)
-	fmt.Println(names)
+	fmt.Println(bookingDetails)
 	}
 
 	
