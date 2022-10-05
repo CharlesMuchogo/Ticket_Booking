@@ -7,26 +7,31 @@ import "fmt"
 func main()  {
 
 	var firstName string
+	var email string
 	var lastName string
 	var totalTickets uint = 50
 	var remainingTickets uint = totalTickets
 	var bookedTickets uint
 
-	 names := []string{} 
+	 var names[] string
 	
 	
 
 	fmt.Println("XXXXXXXXXXXXXXX Welcome to concert ticket booking system XXXXXXXXXXXXXXX")
 
 	for {
+		if remainingTickets == 0 {
+			break;
+		}	
 
-	
-
-	fmt.Println(firstName, "Enter your first name: ")
+	fmt.Println("Enter your first name: ")
 	fmt.Scanln(&firstName)
 
-	fmt.Println(firstName, "Enter your last name: ")
+	fmt.Println("Enter your last name: ")
 	fmt.Scanln(&lastName)
+
+	fmt.Println("Enter your email address: ")
+	fmt.Scanln(&email)
 
 	
 
@@ -40,8 +45,10 @@ func main()  {
 		continue;
 	}
 
+	
+
 	remainingTickets = remainingTickets - bookedTickets
-	names = append(names, firstName +" "+ lastName)
+	names = append(names, firstName +" "+ lastName + " " + email)
 	fmt.Printf("Thank you %v %v, You have booked %v tickets. Total remaining tickets are %v \n", firstName, lastName, bookedTickets, remainingTickets)
 	fmt.Println(names)
 	}
