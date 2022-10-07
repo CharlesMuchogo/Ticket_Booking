@@ -2,10 +2,6 @@ package main
 import "fmt"
 
 
-
-
-func main()  {
-
 	var firstName string
 	var email string
 	var lastName string
@@ -13,7 +9,19 @@ func main()  {
 	var remainingTickets uint = totalTickets
 	var bookedTickets uint
 
-	 var bookingDetails[] string
+	 var bookingDetails[] bookingDetail
+
+type bookingDetail struct{
+	 clientFirstName string 
+	 ClientLastName string
+	 ClientEmail string
+	 bookedTickets	uint
+}
+
+
+func main()  {
+
+	
 	
 	
 
@@ -46,10 +54,12 @@ func main()  {
 	}
 
 	
+	TicketBooked := bookingDetail{clientFirstName: firstName, ClientLastName: lastName, ClientEmail: email, bookedTickets : bookedTickets}
 
 	remainingTickets = remainingTickets - bookedTickets
-	bookingDetails = append(bookingDetails, firstName +" "+ lastName + " " + email)
-	fmt.Printf("Thank you %v %v, You have booked %v tickets. Total remaining tickets are %v \n", firstName, lastName, bookedTickets, remainingTickets)
+	bookingDetails = append(bookingDetails, TicketBooked)
+	fmt.Printf("Thank you %v, You have booked %v tickets. Total remaining tickets are %v \n", TicketBooked.clientFirstName, TicketBooked.bookedTickets, remainingTickets)
+	
 	fmt.Println(bookingDetails)
 	}
 
