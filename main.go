@@ -58,9 +58,9 @@ func main()  {
 
 	remainingTickets = remainingTickets - bookedTickets
 	bookingDetails = append(bookingDetails, TicketBooked)
-	fmt.Printf("Thank you %v, You have booked %v tickets. Total remaining tickets are %v \n", TicketBooked.clientFirstName, TicketBooked.bookedTickets, remainingTickets)
+	fmt.Printf(" \n \n \nThank you %v, You have booked %v tickets. \nYou will receive an email containing the ticket details on %v. \nTotal remaining tickets are %v \n \n \n", TicketBooked.clientFirstName, TicketBooked.bookedTickets, TicketBooked.ClientEmail, remainingTickets)
 	
-	fmt.Println(bookingDetails)
+	fmt.Printf("Booked tickets: %v \n \n", bookingDetails)
 	}
 
 	
